@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 ####01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#12">
+  <meta name="description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#123;">
 <meta name="keywords" content="经典算法,动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="背包问题">
 <meta property="og:url" content="lmhgithi.github.io/2019/08/04/背包问题/index.html">
 <meta property="og:site_name" content="lmh的笔记本">
-<meta property="og:description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 ####01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#12">
+<meta property="og:description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#123;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-04T15:48:59.993Z">
+<meta property="og:updated_time" content="2019-08-04T15:59:25.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="背包问题">
-<meta name="twitter:description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 ####01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#12">
+<meta name="twitter:description" content="W是最大能装的重量，w[i]是第i件物品的重量， v[i]是价值循环中k是装的数量，j是当前的重量，i是第i件物品 转移方程：dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])当k=1就是01背包 01背包12345for(int i=0; i&amp;lt;w.size(); ++i)&amp;#123;	for(int j=W; i&amp;gt;=w[i]; --j)&amp;#123;">
 
 
 
@@ -386,7 +386,7 @@
                 
               
 
-              <time title="Created: 2019-08-04 23:43:30 / Modified: 23:48:59" itemprop="dateCreated datePublished" datetime="2019-08-04T23:43:30+08:00">2019-08-04</time>
+              <time title="Created: 2019-08-04 23:43:30 / Modified: 23:59:25" itemprop="dateCreated datePublished" datetime="2019-08-04T23:43:30+08:00">2019-08-04</time>
             
 
             
@@ -469,9 +469,9 @@
       
         <p><code>W</code>是最大能装的重量，<code>w[i]</code>是第<code>i</code>件物品的重量， <code>v[i]</code>是价值<br>循环中<code>k</code>是装的数量，<code>j</code>是当前的重量，<code>i</code>是第<code>i</code>件物品</p>
 <p>转移方程：<code>dp[j] = max(kv[i] + dp[j - kw[i]], dp[j])</code><br>当k=1就是01背包</p>
-<p>####01背包<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=W; i&gt;=w[i]; --j)&#123;</span><br><span class="line">		dp[j] = max(dp[j], v[i]+dp[i-w[i]]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>####完全背包<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=w[i]; i&lt;W; ++j)&#123;</span><br><span class="line">		dp[j] = max(dp[j], v[i]+dp[i-w[i]]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>####多重背包<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=W; j&gt;=w[i]; --j)&#123;</span><br><span class="line">		<span class="keyword">int</span> cur = min(j/w[i], nums[i]); <span class="comment">//nums[i]是最大数量 ， cur是第i件物品在容量j的背包里能装的最大数量</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;=cur; ++j)&#123;</span><br><span class="line">			dp[j] = max(dp[j], k*v[i]+dp[i-k*w[i]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=W; i&gt;=w[i]; --j)&#123;</span><br><span class="line">		dp[j] = max(dp[j], v[i]+dp[i-w[i]]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=w[i]; i&lt;W; ++j)&#123;</span><br><span class="line">		dp[j] = max(dp[j], v[i]+dp[i-w[i]]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;w.size(); ++i)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=W; j&gt;=w[i]; --j)&#123;</span><br><span class="line">		<span class="keyword">int</span> cur = min(j/w[i], nums[i]); <span class="comment">//nums[i]是最大数量 ， cur是第i件物品在容量j的背包里能装的最大数量</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;=cur; ++j)&#123;</span><br><span class="line">			dp[j] = max(dp[j], k*v[i]+dp[i-k*w[i]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -566,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -715,6 +724,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#01背包"><span class="nav-number">1.</span> <span class="nav-text">01背包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完全背包"><span class="nav-number">2.</span> <span class="nav-text">完全背包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重背包"><span class="nav-number">3.</span> <span class="nav-text">多重背包</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
